@@ -9,10 +9,21 @@
 extern void AddSC_battleground();
 
 // custom
-extern void AddSC_npc_teleport();
+extern void AddSC_item_phase1();
+extern void AddSC_item_phase2();
+extern void AddSC_item_phase4();
+extern void AddSC_item_summonnpc();
+extern void AddSC_item_teleport();
+extern void AddSC_npc_areaguard();
 extern void AddSC_npc_buff();
-extern void AddSC_npc_heal();
 extern void AddSC_npc_codebox();
+extern void AddSC_npc_doorcodes();
+extern void AddSC_npc_guildmaster();
+extern void AddSC_npc_heal();
+extern void AddSC_npc_prof();
+extern void AddSC_npc_rename();
+extern void AddSC_npc_rentalmount();
+extern void AddSC_npc_teleport();
 
 // examples
 extern void AddSC_example_creature();
@@ -479,10 +490,21 @@ void AddScripts()
     QueryResult *result;
     LoadNpcTele(result);
     delete result;
-    AddSC_npc_teleport();
+    AddSC_item_phase1();
+    AddSC_item_phase2();
+    AddSC_item_phase4();
+    AddSC_item_summonnpc();
+    AddSC_item_teleport();
+    AddSC_npc_areaguard();
     AddSC_npc_buff();
-    AddSC_npc_heal();
     AddSC_npc_codebox();
+    AddSC_npc_doorcodes();
+    AddSC_npc_guildmaster();
+    AddSC_npc_heal();
+    AddSC_npc_prof();
+    AddSC_npc_rename();
+    AddSC_npc_rentalmount();
+    AddSC_npc_teleport();
 
     // examples
     AddSC_example_creature();
