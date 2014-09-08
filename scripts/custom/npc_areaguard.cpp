@@ -22,7 +22,7 @@ struct npc_areaguardAI : public Scripted_NoMovementAI
         if (!pCreature->IsWithinDist(pWho, 65.0f, false))
             return;
 
-        extern DatabaseType RuntimeDatabase;
+        extern DatabaseType WorldDatabase;
         uint32 creatureID = pCreature->GetEntry();
         uint32 guardType;
         uint32 triggerDist;

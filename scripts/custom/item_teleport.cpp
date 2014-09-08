@@ -14,7 +14,7 @@ bool ItemUse_item_teleport(Player *player, Item* _Item, SpellCastTargets const& 
     float x_pos, y_pos, z_pos, o_pos;
     uint32 mapid;
     uint32 itemId = _Item->GetEntry();
-    extern DatabaseType RuntimeDatabase;
+    extern DatabaseType WorldDatabase;
 
     // Fetch the coordinates
     QueryResult *result = WorldDatabase.PQuery("SELECT `mapid`, `X_pos`, `Y_pos`, `Z_pos`, `orientation`  FROM `item_teleports` WHERE `entry` = '%i' LIMIT 1",itemId);

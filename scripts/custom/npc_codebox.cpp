@@ -35,7 +35,7 @@ bool checkCode(Player *player, Creature *_Creature, const char* sCode)
     int32 uses = 0;
     bool check = false;
 
-    extern DatabaseType RuntimeDatabase;
+    extern DatabaseType WorldDatabase;
     uint32 creatureID = _Creature->GetEntry();
 
     QueryResult *result = WorldDatabase.PQuery("SELECT `item_id`, `aura_id`, `quantity`, `uses`  FROM `npc_codebox_codes` WHERE `code` = '%s' AND npc_id = %i LIMIT 1",sCode,creatureID);
@@ -161,7 +161,7 @@ bool GossipHello_npc_codebox(Player *player, Creature *_Creature)
 {
     int32 text_id = C_GOSSIP_MENU;
     
-    extern DatabaseType RuntimeDatabase;
+    extern DatabaseType WorldDatabase;
     uint32 creatureID = _Creature->GetEntry();
 
     QueryResult *result = WorldDatabase.PQuery("SELECT `npc_text_id` FROM `npc_codebox_text` WHERE npc_id = %i LIMIT 1",creatureID);

@@ -15,7 +15,7 @@ bool ItemUse_item_summonnpc(Player* pPlayer, Item* pItem, const SpellCastTargets
     uint32 itemId = pItem->GetEntry();
     uint32 npcId;
     uint32 despawnSec;
-    extern DatabaseType RuntimeDatabase;
+    extern DatabaseType WorldDatabase;
 
 if ((pPlayer->isInCombat()) || (!pPlayer->isAlive()))
 {

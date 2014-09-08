@@ -8,7 +8,7 @@ EndScriptData */
 #include "precompiled.h"
 #include "Config/Config.h"
 
-extern DatabaseType RuntimeDatabase;
+extern DatabaseType WorldDatabase;
 
 #define MSG_GOSSIP_TELE          "Teleport to Guild House"
 #define MSG_GOSSIP_NEXTPAGE      "Next -->"
@@ -212,7 +212,7 @@ void buyGuildhouse(Player *player, Creature *_creature, uint32 guildhouseId)
     delete result;
 
     //update DB
-    QueryResult *result_updt = RuntimeDatabase.PQuery("UPDATE `guild_houses` SET `guildId` = %u WHERE `id` = %u",
+    QueryResult *result_updt = WorldDatabase.PQuery("UPDATE `guild_houses` SET `guildId` = %u WHERE `id` = %u",
         player->GetGuildId(), guildhouseId);
 
     player->ModifyMoney(-buyprice);
