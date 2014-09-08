@@ -3,11 +3,13 @@
 * Please see the included DOCS/LICENSE.TXT for more information */
 
 #include "precompiled.h"
+#include "sc_npc_teleport.h"
 
 // battlegrounds
 extern void AddSC_battleground();
 
 // custom
+extern void AddSC_npc_teleport();
 
 // examples
 extern void AddSC_example_creature();
@@ -471,6 +473,10 @@ void AddScripts()
     AddSC_battleground();
 
     // custom
+    QueryResult *result;
+    LoadNpcTele(result);
+    delete result;
+    AddSC_npc_teleport();
 
     // examples
     AddSC_example_creature();

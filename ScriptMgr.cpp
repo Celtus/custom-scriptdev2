@@ -7,6 +7,7 @@
 #include "config.h"
 #include "Database/DatabaseEnv.h"
 #include "DBCStores.h"
+#include "sc_npc_teleport.h"
 #include "ObjectMgr.h"
 #include "ProgressBar.h"
 #include "../system/ScriptLoader.h"
