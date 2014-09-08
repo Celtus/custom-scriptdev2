@@ -10,6 +10,9 @@ extern void AddSC_battleground();
 
 // custom
 extern void AddSC_npc_teleport();
+extern void AddSC_npc_buff();
+extern void AddSC_npc_heal();
+extern void AddSC_npc_codebox();
 
 // examples
 extern void AddSC_example_creature();
@@ -477,6 +480,9 @@ void AddScripts()
     LoadNpcTele(result);
     delete result;
     AddSC_npc_teleport();
+    AddSC_npc_buff();
+    AddSC_npc_heal();
+    AddSC_npc_codebox();
 
     // examples
     AddSC_example_creature();
